@@ -17,13 +17,21 @@ window.addEventListener("load", function() {
       // Continue processing the form if the email address is valid
       const data = new FormData(form);
       const action = e.target.action;
+      var loadingElements = document.querySelectorAll('.loading');
+      for (var i = 0; i < loadingElements.length; i++) {
+        loadingElements[i].style.display = 'block';
+      }
       fetch(action, {
         method: 'POST',
         body: data,
+        
       })
       .then(() => {
-        alert("Success!");
         form.reset();
+        var loadingElements = document.querySelectorAll('.loading');
+        for (var i = 0; i < loadingElements.length; i++) {
+          loadingElements[i].style.display = 'none';
+        }
       })
     });
   });
