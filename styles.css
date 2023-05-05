@@ -44,6 +44,11 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 20px;
+}
+
+.nabar_li a:hover {
+  color: #26107c;
 }
 
 .cover {
@@ -75,7 +80,7 @@ body {
 }
 
 .cover-right {
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -95,7 +100,7 @@ body {
 }
 
 .cover-left_1 {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -111,11 +116,50 @@ body {
 }
 
 .cover-right_1 {
-  background-image: url("./images/hariat_phone.png");
+  background-image: url("./images/hariat_phone_2.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+.cover_2 {
+  margin-top: 50px;
+  display: flex;
+  height: 80vh;
+}
+
+.cover-left_2,
+.cover-right_2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cover-left_2 {
+  background-image: url("./images/hariat_phone_3.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.body_text_6{
+  font-size: 48px;
+  color: #36393F;
+  font-weight: bold;
+}
+
+.body_text_7 {
+  font-size: 24px;
+  color: #555555;
+}
+
+.cover-right_2 {
+  padding: 30px;
+  text-align: center;
 }
 
 
@@ -151,7 +195,7 @@ footer {
 
 
 .links {
-  margin-right: 100px;
+  margin-right: 200px;
   float: right;
 }
 
@@ -160,7 +204,7 @@ footer {
 }
 
 .customer-service {
-  margin-right: 50px;
+  margin-right: 100px;
   float: right;
 }
 
@@ -182,7 +226,7 @@ footer {
     float: right;
   }
 
-.column {
+  .column {
     float: left;
     width: 20%;
     margin-bottom: 50px;
@@ -195,10 +239,14 @@ footer {
   }
   
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 1);
     color: #555555;
+    transition: transform .2s; /* Animation */
   }
   
+  .card:hover {
+    transform: scale(1.15); /* 1.15 is the biggest you can go without overlapping with other cards */
+  }
   .container {
     padding: 0 16px;
   }
@@ -208,6 +256,8 @@ footer {
     clear: both;
     display: table;
   }
+
+  
   
   .our_story {
     color: #7356EB;
@@ -222,7 +272,7 @@ footer {
     font-size: 48px;
     font-weight: bold;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 50px;
   }
 
   .p_ourteam {
@@ -233,7 +283,7 @@ footer {
   
   .button {
     border: none;
-    outline: 0;
+    outline: none;
     display: inline-block;
     padding: 8px;
     color: white;
@@ -390,7 +440,7 @@ footer {
 }
 
 .about_cover-right_1 {
-    background-image: url("./images/about_us.jpg");
+    background-image: url("./images/man_with_an_idea.png");
     background-size: 600px;
     background-position: center;
     background-repeat: no-repeat;
@@ -422,8 +472,8 @@ footer {
 }
 
 .about_cover-left_2 {
-  background-image: url("./images/who_we_are.png");
-  background-size: 600px;
+  background-image: url("./images/what_we_do.jpg");
+  background-size: 400px;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -458,8 +508,13 @@ footer {
 
 .body_text {
   font-size: 48px;
-  color: #7356EB;
-  font-weight: bold;
+  /* color: #7356EB;
+  font-weight: bold; */
+  background: #7D5DFF;
+  background: linear-gradient(to right, #7D5DFF 0%, #271D4F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 .body_text_1{
@@ -537,14 +592,31 @@ footer {
   }
   
   .cover-left_1 {
-    height: 50%;
+    height: 30%;
     background-size: 300px;
   }
   
   .cover-right_1 {
     height: 50%;
     padding: 10px;
+  }
+
+  .cover_2 {
+    margin-top: 120px;
+    height: 80vh;
+    flex-direction: column-reverse; /* Reverse the order of the elements */
+  }
+  
+  .cover-left_2 {
+    height: 50%;
+    padding: 10px;
+  }
+  
+  .cover-right_2 {
     margin-top: 100px;
+    margin-bottom: 100px;
+    height: 30%;
+    background-size: 300px;
   }
   
   .about_cover_1,
@@ -580,6 +652,10 @@ footer {
   
   .card_wrapper {
     margin-left: 0;
+  }
+
+  .card:hover {
+    transform: scale(1.03); /* 1.03 is the biggest you can go without overlapping with other cards */
   }
   
   .input-container {
@@ -732,4 +808,3 @@ footer {
   display: table;
   clear: both;
 }
-
