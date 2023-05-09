@@ -31,6 +31,8 @@ window.addEventListener("load", function() {
         var loadingElements = document.querySelectorAll('.loading');
         for (var i = 0; i < loadingElements.length; i++) {
           loadingElements[i].style.display = 'none';
+          document.getElementById("contact_loading_message").style.display = "initial";
+          setTimeout(() => {document.getElementById("contact_loading_message").style.display = "none";}, 10000);
         }
       })
     });

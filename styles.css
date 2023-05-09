@@ -54,6 +54,7 @@ body {
 .cover {
     display: flex;
     height: 80vh;
+    margin-bottom: 40px;
 }
 
 .cover-left,
@@ -85,83 +86,58 @@ body {
 }
 
 .cover_1 {
-  margin-top: 50px;
-  display: flex;
-  height: 80vh;
-}
-
-.cover-left_1,
-.cover-right_1 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.cover-left_1 {
-  padding: 30px;
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
   text-align: center;
 }
 
-.body_text_4{
-  font-size: 48px;
-  color: #36393F;
-  font-weight: bold;
-}
-
-.body_text_5 {
-  font-size: 24px;
-  color: #555555;
-}
-
-.cover-right_1 {
-  background-image: url("./images/hariat_phone_2.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.cover_2 {
-  margin-top: 50px;
-  display: flex;
-  height: 80vh;
-}
-
-.cover-left_2,
-.cover-right_2 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.cover-left_2 {
-  background-image: url("./images/hariat_phone_3.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.body_text_6{
-  font-size: 48px;
-  color: #36393F;
-  font-weight: bold;
-}
-
-.body_text_7 {
-  font-size: 24px;
-  color: #555555;
-}
-
-.cover-right_2 {
-  padding: 30px;
+.cover_1 h3 {
   text-align: center;
+  font-weight: 16px;
+  margin: 10px 0;
 }
 
+
+.index_row {
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.index_column {
+
+  flex-basis: 31%;
+  background-color: #d4cafa;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  margin-left: 30px;
+  margin-right: 30px;
+  box-sizing: border-box;
+  transition: transform 1.5s;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.index_column img {
+  width: 100%;
+  height: auto;
+}
+
+.index_column:hover {
+  transform: scale(1.15);
+}
+
+.services-wrapper {
+  max-width: fit-content;
+  max-height: 475px;
+  overflow: hidden;
+  margin: 0.75rem auto;
+}
+
+.services-wrapper img {
+  width: 100%;
+}
 
 a:link, a:visited, a:hover, a:active
  {
@@ -199,6 +175,10 @@ footer {
   float: right;
 }
 
+ul h3 {
+  padding-bottom: 10px;
+}
+
 .links li {
   list-style-type: none;
 }
@@ -226,6 +206,10 @@ footer {
     float: right;
   }
 
+  .row {
+    padding-bottom: 20px;
+  }
+
   .column {
     float: left;
     width: 20%;
@@ -241,12 +225,14 @@ footer {
   .card {
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 1);
     color: #555555;
-    transition: transform .2s; /* Animation */
+    transition: transform 1.5s; /* Animation */
+    padding-bottom: 10px;
   }
   
   .card:hover {
     transform: scale(1.15); /* 1.15 is the biggest you can go without overlapping with other cards */
   }
+
   .container {
     padding: 0 16px;
   }
@@ -279,6 +265,13 @@ footer {
     color: #555555;
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  #contact_loading_message {
+    text-align: left;
+    font-size: 17px;
+    color: #36393F;
+    display: none;
   }
   
   .button {
@@ -343,12 +336,6 @@ footer {
       margin: 16px 0;
       position: relative;
       border-radius: 4px;
-  }
-  
-  @media only screen and (max-width: 768px){
-      .styled-input {
-          width:100%;
-      }
   }
   
   .styled-input label {
@@ -508,11 +495,10 @@ footer {
 
 .body_text {
   font-size: 48px;
-  /* color: #7356EB;
-  font-weight: bold; */
   background: #7D5DFF;
-  background: linear-gradient(to right, #7D5DFF 0%, #271D4F 100%);
+  background: linear-gradient(to right, #7D5DFF 0%, #342769 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 
 }
@@ -546,8 +532,8 @@ footer {
   animation: beat .50s infinite alternate;
 	transform-origin: center;
   position: absolute;
-  top: 300px;
-  left: 850px;
+  top: 40%;
+  left: 44.7%;
   z-index: 100;
 }
 
@@ -555,116 +541,99 @@ footer {
 	to { transform: scale(1.4); }
 }
 
+/* Mobile devices (portrait and landscape)*/
 @media only screen and (max-width: 767px) {
-  .loading-image {
-    height: 100px;
-    animation: beat .50s infinite alternate;
-    transform-origin: center;
-    position: absolute;
-    top: 300px;
-    left: 200px;
-    z-index: 100;
+  .navibar_logo img {
+    height: 70px;
   }
-}
 
-/* Media queries for mobile devices */
-@media only screen and (max-width: 767px) {
-  
-  .cover {
-    height: 60vh;
+  .navbar_logo_li {
+    left: 50%;
+    top: 0;
+  }
+
+  .index_row {
     flex-direction: column;
   }
-  
-  .cover-left {
-    height: 50%;
-    background-size: 300px;
-  }
-  
-  .cover-right {
-    height: 50%;
-    padding: 10px;
+
+  .index_column {
+    flex-basis: 100%;
   }
 
-  .cover_1 {
-    margin-top: 120px;
-    height: 70vh;
-    flex-direction: column;
-  }
-  
-  .cover-left_1 {
-    height: 30%;
-    background-size: 300px;
-  }
-  
-  .cover-right_1 {
-    height: 50%;
-    padding: 10px;
+  .body_text {
+    padding-top: 25px;
   }
 
-  .cover_2 {
-    margin-top: 120px;
-    height: 80vh;
-    flex-direction: column-reverse; /* Reverse the order of the elements */
+  .body_text_1 {
+    font-size: 32px;
   }
-  
-  .cover-left_2 {
-    height: 50%;
-    padding: 10px;
+
+  .body_text_2 {
+    font-size: 18px;
   }
-  
-  .cover-right_2 {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    height: 30%;
-    background-size: 300px;
-  }
-  
+
   .about_cover_1,
   .about_cover_2,
   .about_cover_3 {
-    height: 60vh;
-  }
-  
-  .about_cover-right_1 {
-    background-size: 300px;
-  }
-  
-  .about_cover-left_2 {
-    background-size: 300px;
+    flex-direction: column;
+    height: auto;
   }
 
+  .about_cover-left_1,
+  .about_cover-left_2,
+  .about_cover-left_3,
+  .about_cover-right_1,
+  .about_cover-right_2,
   .about_cover-right_3 {
-    background-size: 200px;
+    flex: 1;
+    padding: 20px;
+    background-size: auto 200px;
   }
-  
-  .body_text_1{
-    font-size: 28px;
-  }
-  
-  .body_text_2 {
-    font-size: 16px;
-  }
-  
+
   .column {
     width: 100%;
-    margin: 0;
+    margin-bottom: 30px;
   }
-  
-  .card_wrapper {
-    margin-left: 0;
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links,
+  .customer-service {
+    margin-right: 0;
+  }
+
+  .loading-image {
+    height: 150px;
+    animation: beat .75s infinite alternate;
+    transform-origin: center;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    z-index: 100;
   }
 
   .card:hover {
-    transform: scale(1.03); /* 1.03 is the biggest you can go without overlapping with other cards */
+    transform: scale(1.05);
   }
-  
-  .input-container {
-    width: 100%;
+
+  .index_column:hover {
+    transform: scale(1.05);
   }
 }
 
-/* Media query for smaller screen sizes */
 @media (max-width: 768px) {
+
+  .index_row {
+    flex-wrap: wrap;
+  }
+
+  .index_column {
+    flex-basis: 48%;
+  }
+
   .navbar {
     display: flex;
     flex-direction: column;
@@ -751,7 +720,12 @@ footer {
   .about_cover_1,
   .about_cover_2,
   .about_cover_3 {
-    height: 40vh;
+    height: 50vh;
+    padding-bottom: 10px;
+  }
+
+  .about_cover_3 {
+    flex-direction: column-reverse;
   }
   
   .about_cover-right_1 {
@@ -763,6 +737,7 @@ footer {
   }
   
   .body_text_1{
+    padding-top: 5px;
     font-size: 28px;
   }
   
@@ -785,6 +760,7 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
+
   .footer-container {
     flex-direction: column;
     align-items: center;
